@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionsAsked"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:padding="10sp"
+            android:id="@+id/txt_questions"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="Ready  then click on Next"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one perfect"
+                android:id="@+id/txt_optList"/>
+
+            <RadioButton
+                android:id="@+id/rb_sa"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strongly Agree " />
+
+            <RadioButton
+                android:id="@+id/rb_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agree " />
+
+            <RadioButton
+                android:id="@+id/rb_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Neutral " />
+
+            <RadioButton
+                android:id="@+id/rb_da"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disagree " />
+
+            <RadioButton
+                android:id="@+id/rb_sda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strongly disagree " />
+        </LinearLayout>
+
+<!--    <fragment-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:name="com.myappgen2020.cnbst.QuestionFragment"-->
+<!--        android:id="@+id/fragment_questions">-->
+
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:name="com.myappgen2020.cnbst.QuestionFragment"-->
+<!--        android:id="@+id/fragment_answer">-->
+
+<!--    </fragment>-->
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_AnsNext"
+        android:layout_gravity="center"
+        android:text="Next"/>
+</LinearLayout>

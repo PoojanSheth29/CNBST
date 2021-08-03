@@ -1,0 +1,2 @@
+rootProject.name = "CNBST"
+include ':app'
