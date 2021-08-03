@@ -10,12 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_text"
-        android:text="hi"/>
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Click here to download the excel file"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ha"
-        android:id="@+id/btn_try1"/>
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ha"-->
+<!--        android:id="@+id/btn_try1"/>-->
 
 </LinearLayout>
