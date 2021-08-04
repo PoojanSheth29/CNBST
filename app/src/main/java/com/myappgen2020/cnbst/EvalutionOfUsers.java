@@ -16,15 +16,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.mail.Message;
 
 import javax.mail.Authenticator;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 public class EvalutionOfUsers extends AppCompatActivity {
     String Abstraction,Inquisitive,Motivation,CriticalThinking;
@@ -97,12 +104,25 @@ public class EvalutionOfUsers extends AppCompatActivity {
                 message.setRecipients(MimeMessage.RecipientType.TO,InternetAddress.parse(email));
                 message.setSubject("Mail Try 1");
                 message.setText("Abstraction   " + Abstraction + "\n Inquisitive   "+ Inquisitive+"\n Motivation  " + Motivation+"\n CriticalThinking  "+ CriticalThinking);
-                new SendMail().execute(message);
+                MimeBodyPart mimeBodyPart = new MimeBodyPart();
+                Multipart mimeMultipart = new MimeMultipart();
+                    String file = "C:\\Users\\lenovo\\Dropbox\\My PC (DESKTOP-RTP955M)\\Downloads\\try1.jpg";
+                    String fileName = "Participation Certificate";
+                    DataSource source = new FileDataSource(file);
+                    mimeBodyPart.setDataHandler(new DataHandler(source));
+                    mimeBodyPart.setFileName(fileName);
+                    mimeMultipart.addBodyPart(mimeBodyPart);
+
+                    message.setContent(mimeMultipart);
+                    Transport.send(message);
+
+//                new SendMail().execute(message);
 
 
                 }
                 catch (MessagingException e)
                 {
+                    System.out.println("in catch bro");
                     e.printStackTrace();
                 }
 

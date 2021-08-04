@@ -93,11 +93,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -122,7 +124,7 @@ public class ExcelWrite extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     ArrayList<Bean> universal;
-
+    ImageView img_download;
     WritableWorkbook workbook;
 
 
@@ -132,10 +134,11 @@ public class ExcelWrite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excel_write);
         Daonloaad = findViewById(R.id.tv_text);
+        img_download = findViewById(R.id.img_download);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Users");
         loadFirebaseData();
-        Daonloaad.setOnClickListener(new View.OnClickListener() {
+        img_download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
@@ -147,6 +150,8 @@ public class ExcelWrite extends AppCompatActivity {
                 {
                     //your code
                     createExcelSheet();
+                    Intent intent = new Intent(ExcelWrite.this,MainActivity.class);
+                    startActivity(intent);
                 }
 
             }
