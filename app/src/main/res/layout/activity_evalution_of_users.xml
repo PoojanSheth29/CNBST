@@ -95,11 +95,19 @@
             android:id="@+id/tv_ct"
             android:text="NULL"
             android:textColor="#DF1010"/>
+
+
     </LinearLayout>
 
 
 
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_email"
+        android:layout_marginTop="60dp"
+        android:text="Do you want a copy in mail"
+        android:backgroundTint="#000"/>
 
 
 </LinearLayout>

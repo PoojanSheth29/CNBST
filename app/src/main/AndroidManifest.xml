@@ -8,19 +8,19 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo2"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo2"
         android:supportsRtl="true"
         android:theme="@style/Theme.CNBST">
         <activity android:name=".EvalutionOfUsers"></activity>
-        <activity android:name=".LoginChoice" />
+        <activity android:name=".ExcelWrite" />
         <activity android:name=".QuestionsAsked" />
         <activity android:name=".UserLogin" />
         <activity android:name=".AdminLogin" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ExcelWrite">
+        <activity android:name=".LoginChoice" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

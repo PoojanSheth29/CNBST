@@ -211,6 +211,7 @@ public class QuestionsAsked extends AppCompatActivity {
                             myRef.child(userskey).setValue(users);
 
                             Intent i = new Intent(QuestionsAsked.this, EvalutionOfUsers.class);
+                            i.putExtra("EMAIL",users.getEmail());
                             i.putExtra("optionSelected.get(0)",optionSelected.get(0));
                             i.putExtra("optionSelected.get(1)",optionSelected.get(1));
                             i.putExtra("optionSelected.get(2)",optionSelected.get(2));

@@ -36,7 +36,7 @@
         android:textColorHint="#fff"
         android:textColor="#fff"
         android:inputType="textPassword"
-        android:imeOptions="actionNext"
+        android:imeOptions="actionDone"
         android:drawableLeft="@drawable/ic_pwd"
         android:drawablePadding="20dp"/>
     <Button

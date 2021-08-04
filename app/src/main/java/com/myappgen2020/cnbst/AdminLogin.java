@@ -35,7 +35,7 @@ public class AdminLogin extends AppCompatActivity {
 
                if (usr.equals("admin") && pwd.equals("admin"))
                {
-                   Intent intent = new Intent(AdminLogin.this,MainActivity.class);
+                   Intent intent = new Intent(AdminLogin.this,ExcelWrite.class);
                    startActivity(intent);
                }
                else
